@@ -1,32 +1,27 @@
 package Lazaar;
 
-import javax.swing.JLabel;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import Lazaar.Vue.VuePersonne;
 
-
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     @Override
     public void start(Stage stage) {
+        // Créer une instance de Personne
         Personne p1 = new Personne("Lazaar", "Mehdi", 22);
-        System.out.println(p1.toString());
-        /* Label label = new Label(p1.toString());
+        
+        // Créer la vue pour afficher la personne
+        VuePersonne vue = new VuePersonne(p1);
 
-        StackPane root = new StackPane();
-        root.getChildren().add(label);
+        // Créer une scène avec la vue comme racine
+        Scene scene = new Scene(vue.getRoot(), 320, 240);
 
-        Scene scene = new Scene(root, 320, 240);
-
+        // Configurer la scène et afficher la fenêtre
         stage.setScene(scene);
-        stage.show();*/
+        stage.setTitle("Informations Personne");
+        stage.show();
     }
 
     public static void main(String[] args) {

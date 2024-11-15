@@ -16,22 +16,22 @@ public class Personne {
         this.prenom =  new SimpleStringProperty(prenom);
         this.age = new SimpleIntegerProperty(age);
     }
-    StringProperty nomProperty() {
+    public StringProperty nomProperty() {
         return nom;
     }
-    StringProperty prenomProperty() {
+    public StringProperty prenomProperty() {
         return prenom;
     }
-    IntegerProperty ageProperty() {
+    public IntegerProperty ageProperty() {
         return age;
     }
-    void setNom(String nom) {
+    public void setNom(String nom) {
         this.nom.set(nom);
     }
-    void setPrenom(String prenom) {
+    public void setPrenom(String prenom) {
         this.prenom.set(prenom);
     }
-    void setAge(int age) {
+    public void setAge(int age) {
         this.age.set(age);
     }
     @Override
