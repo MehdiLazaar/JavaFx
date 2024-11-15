@@ -34,4 +34,8 @@ public class Personne {
     void setAge(int age) {
         this.age.set(age);
     }
+    @Override
+    public String toString() {
+        return "{" + "nom=" + nom.get() + ", prenom=" + prenom.get() + ", age=" + age.get() + '}';
+    }
 }

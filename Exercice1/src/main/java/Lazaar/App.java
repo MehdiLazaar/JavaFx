@@ -1,5 +1,7 @@
 package Lazaar;
 
+import javax.swing.JLabel;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -14,17 +16,20 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
+        Personne p1 = new Personne("Lazaar", "Mehdi", 22);
+        System.out.println(p1.toString());
+        /* Label label = new Label(p1.toString());
 
-        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);
+        StackPane root = new StackPane();
+        root.getChildren().add(label);
+
+        Scene scene = new Scene(root, 320, 240);
+
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
     }
 
     public static void main(String[] args) {
         launch();
     }
-
 }
